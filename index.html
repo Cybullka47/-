@@ -1,27 +1,58 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
- <head>
-  <meta charset=utf-8">
-  <title>Пример веб-страницы</title>
- </head>
- <body>
-<!-- Простая форма, которая пошлёт GET запрос -->
-<form action="">
-  <label for="GET-name">Surname:</label>
-  <input id="GET-name" type="text" name="name" />
-  <input type="submit" value="Save" />
-</form>
-  <form action="">
-  <label for="GET-name">Name:</label>
-  <input id="GET-name" type="text" name="name" />
-  <input type="submit" value="Save" />
-<form action="" method="post">
- </form>
-  <fieldset>
-    <legend>Title</legend>
-    <input type="radio" name="radio" id="radio" />
-    <label for="radio">Click me</label>
-  </fieldset>
-</form>
- </body>
-</html>
+<img id="myImg" src="https://gas-kvas.com/uploads/posts/2023-01/1673339139_gas-kvas-com-p-anime-risunki-inoske-23.jpg" style="position: relative" weight="500" height="200">
+<script>
+		var cat = document.getElementById('myImg');
+var angle = 0, lastTime = null;
+function animate(time) {
+if (lastTime != null)
+angle += (time - lastTime) * 0.001;
+lastTime = time;
+cat.style.top = (Math.sin(angle) * 100) + "px";
+cat.style.left = (Math.cos(angle) * 200) + "px";
+requestAnimationFrame(animate);
+}
+
+
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+alert("Маловато будет!");
+});
+
+document.getElementById('myImg').onclick = myFunction;
+
+function myFunction() {
+  alert('Ouch!!!');
+}
+
+
+requestAnimationFrame(animate);
+
+	</script>
+	<img id="myIml" src="https://segaretro.org/images/9/98/DemonSlayer_Inosuke.png" style="position: relative" weight="500" height="200">
+<script>
+	var cat = document.getElementById('myIml');
+var angle = 0, lastTime = null;
+function animate(time) {
+if (lastTime != null)
+angle += (time - lastTime) * 0.001;
+lastTime = time;
+cat.style.top = (Math.sin(angle) * 100) + "px";
+cat.style.left = (Math.cos(angle) * 200) + "px";
+requestAnimationFrame(animate);
+}
+
+
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+alert("Маловато будет!");
+});
+
+document.getElementById('myIml').onclick = myFunction;
+
+function myFunction() {
+  alert('Ouch!!!');
+}
+
+
+requestAnimationFrame(animate);
+
+</script>
