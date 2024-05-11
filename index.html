@@ -6,8 +6,7 @@
     <input type="email" name="email" placeholder="Введите email">
     <input type="hidden" id="token" name="token">
     <button type="submit" name="post">Отправить</button>
-</form>
-  $error = true;
+   $error = true;
     $secret = 'СЕКРЕТНЫЙ_КЛЮЧ';
     
     if (!empty($_POST['g-recaptcha-response'])) {
@@ -27,6 +26,7 @@
     if ($error) {
         echo 'Ошибка заполнения капчи.';
     }
+</form>
 <h2>личная информация</h2>
   <p>
     <label for="card">
