@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
  <head>
-  
+  <form action="#" method="post">
+    <input type="text" name="name" placeholder="Введите имя">
+    <input type="email" name="email" placeholder="Введите email">
+    <input type="hidden" id="token" name="token">
+    <button type="submit" name="post">Отправить</button>
+</form>
+  $error = true;
+    $secret = 'СЕКРЕТНЫЙ_КЛЮЧ';
+    
+    if (!empty($_POST['g-recaptcha-response'])) {
+        $curl = curl_init('https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, 'secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+        $out = curl_exec($curl);
+        curl_close($curl);
+        
+        $out = json_decode($out);
+        if ($out->success == true) {
+            $error = false;
+        } 
+    }
+        
+    if ($error) {
+        echo 'Ошибка заполнения капчи.';
+    }
 <h2>личная информация</h2>
   <p>
     <label for="card">
