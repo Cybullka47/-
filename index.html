@@ -1,58 +1,41 @@
-<img id="myImg" src="https://gas-kvas.com/uploads/posts/2023-01/1673339139_gas-kvas-com-p-anime-risunki-inoske-23.jpg" style="position: relative" weight="500" height="200">
-<script>
-		var cat = document.getElementById('myImg');
-var angle = 0, lastTime = null;
-function animate(time) {
-if (lastTime != null)
-angle += (time - lastTime) * 0.001;
-lastTime = time;
-cat.style.top = (Math.sin(angle) * 100) + "px";
-cat.style.left = (Math.cos(angle) * 200) + "px";
-requestAnimationFrame(animate);
-}
+<!DOCTYPE html>
+<html>
+ <head>
+  
+<h2>личная информация</h2>
+  <p>
+    <label for="card">
+      <span>Card type:</span>
+    </label>
+    <select id="card" name="usercard">
+      <option value="visa">лох</option>
+      <option value="mc">лох</option>
+      <option value="amex">лох</option>
+    </select>
+  </p>
+  <p>
+    <label for="number">
+      <span>Card number:</span>
+      <strong><abbr title="required">*</abbr></strong>
+    </label>
+    <input type="number" id="number" name="cardnumber" />
+  </p>
+  <p>
+    <label for="date">
+      <span>Expiration date:</span>
+      <strong><abbr title="required">*</abbr></strong>
+      <em>formatted as mm/yy</em>
+    </label>
+    <input type="date" id="date" name="expiration" />
+  </p>
+</section>
 
-
-var button = document.querySelector("button");
-button.addEventListener("click", function() {
-alert("Маловато будет!");
-});
-
-document.getElementById('myImg').onclick = myFunction;
-
-function myFunction() {
-  alert('Ouch!!!');
-}
-
-
-requestAnimationFrame(animate);
-
-	</script>
-	<img id="myIml" src="https://segaretro.org/images/9/98/DemonSlayer_Inosuke.png" style="position: relative" weight="500" height="200">
-<script>
-	var cat = document.getElementById('myIml');
-var angle = 0, lastTime = null;
-function animate(time) {
-if (lastTime != null)
-angle += (time - lastTime) * 0.001;
-lastTime = time;
-cat.style.top = (Math.sin(angle) * 100) + "px";
-cat.style.left = (Math.cos(angle) * 200) + "px";
-requestAnimationFrame(animate);
-}
-
-
-var button = document.querySelector("button");
-button.addEventListener("click", function() {
-alert("Маловато будет!");
-});
-
-document.getElementById('myIml').onclick = myFunction;
-
-function myFunction() {
-  alert('Ouch!!!');
-}
-
-
-requestAnimationFrame(animate);
-
-</script>
+  <meta charset="utf-8">
+  <title>регистрация</title>
+ </head>
+ <body>
+ <form action="indexx.html" target="_blank">
+   <button>нажми если миша гей</button>
+  </form>
+ </body>
+</html>
